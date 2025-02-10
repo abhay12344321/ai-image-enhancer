@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>फ्री AI इमेज एन्हांसर</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI इमेज एन्हांसर <i class="fas fa-magic"></i></h1>
+        
+        <!-- इमेज अपलोड सेक्शन -->
+        <div class="upload-section">
+            <input type="file" id="imageInput" accept="image/*" hidden>
+            <button id="uploadBtn"><i class="fas fa-upload"></i> इमेज चुनें</button>
+        </div>
+
+        <!-- इमेज प्रिव्यू -->
+        <div class="image-preview">
+            <img src="" alt="Original Image" id="originalImage">
+            <img src="" alt="Enhanced Image" id="enhancedImage">
+        </div>
+
+        <!-- कंट्रोल्स -->
+        <div class="controls">
+            <button onclick="autoEnhance()"><i class="fas fa-robot"></i> ऑटो एन्हांस</button>
+            <button onclick="downloadImage()"><i class="fas fa-download"></i> डाउनलोड</button>
+        </div>
+    </div>
+
+    <!-- TensorFlow.js और Fabric.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.18.0/dist/tf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.5.0/fabric.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
